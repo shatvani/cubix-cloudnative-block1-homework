@@ -53,8 +53,7 @@ jobs:
     needs: docker
 
     steps:
+      - uses: actions/checkout@v2
       - name: Run verify-image.sh
-        run:  |
-         chmod +x ./verify-image.sh
-         ./verify-image.sh  
+        run: ./verify-image.sh  
         shell: bash
