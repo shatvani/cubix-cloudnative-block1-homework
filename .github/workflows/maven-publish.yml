@@ -54,6 +54,4 @@ jobs:
 
     steps:
       - name: Run verify-image.sh
-        run: sh ./verify-image.sh
-        shell: bash
-  
+        run:  bash ${GITHUB_WORKSPACE}/verify-image.sh  
