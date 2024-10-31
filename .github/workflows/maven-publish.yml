@@ -54,4 +54,7 @@ jobs:
 
     steps:
       - name: Run verify-image.sh
-        run:  bash ./verify-image.sh  
+        run:  |
+         chmod +x ./verify-image.sh
+         ./verify-image.sh  
+        shell: bash
