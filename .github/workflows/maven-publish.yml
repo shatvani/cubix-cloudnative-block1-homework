@@ -29,9 +29,7 @@ jobs:
     - name: Check Java version
       run: java -version
     - name: Upload artifact for Docker job
-      with:
-        name: java-app
-        run: ./mvnw package
+      run: ./mvnw package
       
   docker:
 
@@ -43,10 +41,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Download artifact from Maven job
-      uses: actions/download-artifact@v3
-      with: 
-        name: java-app
     - name: Logging in to Docker
       run: docker login ghcr.io -u shatvani -p ${{ github.token }}
     - name: Build the Docker image    
