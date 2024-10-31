@@ -29,7 +29,6 @@ jobs:
     - name: Check Java version
       run: java -version
     - name: Upload artifact for Docker job
-      uses: actions/upload-artifact@v3
       with:
         name: java-app
         run: ./mvnw package
